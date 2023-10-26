@@ -2,24 +2,27 @@
 *{
     margin:0;
     padding:0;
+    /* pointer-events: none; */
 }
 #main{
     width:100%;
     height:100vh;
-    background-color: rgb(136, 221, 221);
 }
 #back{
     width:100%;
     height:100vh;
-    background-color: red
 }
+/* #back img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+} */
 #front{
     position: absolute;
     top: 0;
     left: 0;
     width:100%;
     height:100vh;
-    background-color: #999999d8;
 }
 #container{
     position: relative;
@@ -28,8 +31,6 @@
     width: 80%;
     max-width: 1920;
     height: 100vh;
-    border: 2px solid red;
-    /* background-color: aqua; */
 }
 .navbar{
     display: flex;
@@ -37,7 +38,6 @@
     align-items: center;
     width: 100%;
     padding: 5px 0;
-    /* background-color: cadetblue; */
 }
 .navbar img {
     height: 90px;
@@ -51,14 +51,12 @@
 .navbar a{
     font-family: Creepster;
     text-transform: capitalize;
-    /* font-weight: 900; */
     font-size: 23px;
     color:black;
     letter-spacing:2px ;
     text-decoration: none;
 }
 .content{
-    font-family:Nosifer ;
     position: absolute;
     top: 50%;
     left:0;
@@ -66,13 +64,51 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    overflow: hidden;
 }
 .left-content{
     min-width:50%;
-    background-color: blue;
+}
+.left-content .text{
+    height: 6vw;
+    overflow: hidden;
+}
+.left-content .text h1{
+    line-height: 1.6;
+    font-family:Nosifer;
+    color: white;
+    font-weight: 100;
+    font-size: 4vw;
+}
+.left-content button{
+    pointer-events: all;
+    padding:5px 102px;
+    font-family: Nosifer;
+    font-size: 20px;
+    border: 2px solid crimson;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: transparent;
+}
+.left-content button:hover{
+    background-color: crimson;
+    border: 2px solid gainsboro;
 }
 .right-content{
-    min-width:30%;
-    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width:30%;
+    color: white;
+}
+.right-content p{
+    font-size: 15px;
+    font-weight:300;
+    margin: 10px 0;
+    text-align: right;   
+}
+.right-content img{
+    height: 200px;
+    width: 250px;
+    background-color: aqua;
+    margin: 10px 0;
 }
